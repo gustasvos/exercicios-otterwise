@@ -278,11 +278,62 @@ function dinheiro(x) {
         result = parseInt(x / cedulas[i])
         x %= cedulas[i]
         console.log(`${result} notas de R$ ${cedulas[i]},00`)
-        console.log(x)
+        // console.log(x)
     }
 }
 
 dinheiro(576)
 
+console.log('------------------------------------')
+
 // EX 23
 
+function horario(x) {
+    let hora = parseInt(x / 3600)
+    let resto = x % 3600
+    let minuto = parseInt(resto / 60)
+    let sec = resto % 60
+    console.log(`${hora}:${minuto}:${sec}`)
+}
+
+horario(2592)
+
+console.log('------------------------------------')
+
+// EX 24
+
+function proposta(x, y) {
+    let clt = (x -(x * 0.08) + 700).toFixed()
+    console.log(clt)
+    if (clt > y) {
+        return 'CLT'
+    } else {
+        return 'PJ'
+    }
+}
+
+console.log(proposta(1000, 1500))
+
+console.log('------------------------------------')
+
+// EX 25
+
+function imposto(x) {
+    if (x > 21453.24) {
+        return x * 0.075
+    } else if ( x > 32151.48) {
+        return x * 0.15
+    } else if (x > 42869.16) {
+        return x * 0.225
+    } else if (x > 53565.72) {
+        return x * 0.275
+    } else {
+        return x
+    }
+}
+
+console.log(imposto(25000))
+
+console.log('------------------------------------')
+
+// EX 26
