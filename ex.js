@@ -337,3 +337,14 @@ console.log(imposto(25000))
 console.log('------------------------------------')
 
 // EX 26
+
+function custo(x) {
+    let salario = 1000
+    let salarioh = (salario / 160) * 2    
+
+    return salarioh * x
+}
+
+console.log(custo(160))
+
+console.log('------------------------------------')
