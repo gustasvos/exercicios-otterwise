@@ -1,8 +1,8 @@
 // EX 1
 
-let frase = 'Meu nome é Gustavo e eu sou estudante de analise e desenvolvimento de sistemas'
+const string = 'Meu nome é Gustavo e eu sou estudante de analise e desenvolvimento de sistemas'
 
-console.log(frase)
+console.log(string)
 
 console.log('------------------------------------')
 
@@ -17,10 +17,10 @@ console.log('------------------------------------')
 
 // EX 3
 
-let nome = 'Gustavo'
-let sobrenome = 'Rosa'
+const firstName = 'Gustavo'
+const lastName = 'Rosa'
 
-console.log(`${nome} ${sobrenome}`)
+console.log(`${firstName} ${lastName}`)
 
 console.log('------------------------------------')
 
@@ -32,9 +32,9 @@ console.log('------------------------------------')
 
 // EX 5
 
-let valor1 = 15
-let valor2 = 09
-let resultado = valor1 + valor2
+const valor1 = 15
+const valor2 = 09
+const resultado = valor1 + valor2
 
 console.log(resultado)
 
@@ -42,12 +42,12 @@ console.log('------------------------------------')
 
 // EX 6
 
-let salarioFixo = 5000
-let valorTotal = 100000
-let porcentagem = 10
-let valorFinal = (valorTotal * porcentagem) / 100
+const fixedSalary = 5000
+const totalValue = 100000
+const percent = 10
+const finalValue = (totalValue * percent) / 100
 
-console.log(salarioFixo + valorFinal)
+console.log(fixedSalary + finalValue)
 
 console.log('------------------------------------')
 
@@ -59,7 +59,7 @@ let value2 = 12
 console.log(`valor 1: ${value1}`)
 console.log(`valor 2: ${value2}`)
 
-let aux = value1
+const aux = value1
 value1 = value2
 value2 = aux
 
@@ -70,28 +70,28 @@ console.log('------------------------------------')
 
 // EX 8
 
-let distancia = 240
-let velocidade = 80
-let combustivel = 20
+const distance = 240
+const vel = 80
+const fuel = 20
 
-console.log(`média de consumo: ${distancia / combustivel} km/l`)
-console.log(`tempo da viagem: ${distancia / velocidade} horas`)
+console.log(`média de consumo: ${distance / fuel} km/l`)
+console.log(`tempo da viagem: ${distance / vel} horas`)
 
 console.log('------------------------------------')
 
 // EX 9
 
-let name = 'Gustavo'
-let idade = 21
+const name = 'Gustavo'
+const age = 21
 
-if (idade >= 18) console.log(`${name} é maior de idade`); else console.log(`${name} é menor de idade`)
+if (age >= 18) console.log(`${name} é maior de idade`); else console.log(`${name} é menor de idade`)
 
 console.log('------------------------------------')
 
 // EX 10
 
-let num1 = 15
-let num2 = 88
+const num1 = 15
+const num2 = 88
 
 if (num1 > num2) {
     console.log(`${num1} é maior que ${num2}`)
@@ -105,13 +105,13 @@ console.log('------------------------------------')
 
 // EX 11
 
-let lado1 = 2
-let lado2 = 6
-let lado3 = 4
+const side1 = 2
+const side2 = 6
+const side3 = 4
 
-if (lado1 == lado2 && lado1 == lado3) {
+if (side1 == side2 && side1 == side3) {
     console.log('triangulo equilatero')
-} else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+} else if (side1 == side2 || side1 == side3 || side2 == side3) {
     console.log('triangulo isosceles')
 } else console.log('triangulo escaleno')
 
@@ -119,26 +119,26 @@ console.log('------------------------------------')
 
 // EX 12
 
-let nomeCompleto = 'Gustavo Rosa'
-let servidor = true
-let professor = false
+const fullName = 'Gustavo Rosa'
+const worker = true
+const teacher = false
 
-if (servidor == true) {
-    if (professor == true) {
-        console.log(`${nomeCompleto} você tem acesso a linha de credito especial`)    
+if (worker) {
+    if (teacher) {
+        console.log(`${fullName} você tem acesso a linha de credito especial`)    
     } else {
-        console.log(`${nomeCompleto} você tem acesso a nossa linha de crédito para servidores.`)
+        console.log(`${fullName} você tem acesso a nossa linha de crédito para servidores.`)
     }
 }
 else {
-    console.log(`${nomeCompleto} infelizmente você não tem uma linha de crédito disponível`)
+    console.log(`${fullName} infelizmente você não tem uma linha de crédito disponível`)
 }
 
 console.log('------------------------------------')
 
 // EX 13
 
-let num = 15
+const num = 15
 
 if (num % 2 == 0) console.log('Par'); else console.log('Ímpar')
 
@@ -146,9 +146,9 @@ console.log('------------------------------------')
 
 // EX 14
 
-let n1 = 2
-let n2 = 500
-let n3 = 10000000
+const n1 = 2
+const n2 = 500
+const n3 = 10000000
 
 // n1 maior
 if (n1 > n2 && n1 > n3) {
@@ -178,35 +178,78 @@ console.log('------------------------------------')
 
 // EX 15
 
-let v1 = 1
-let v2 = 0
-let v3 = 3
-let arr = [v1, v2, v3]
+  /* Existem 6 possiveis ordens para imprimior os numeros lidos */
+//   if (n1 <= n2 && n2 <= n3)
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n1, n2, n3);
+//     }
+//   else if (n1 <= n3 && n3 <= n2)
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n1, n3, n2);
+//     }
+//   else if (n2 <= n1 && n1 <= n3)
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n2, n1, n3);
+//     }
+//   else if (n2 <= n3 && n3 <= n1) 
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n2, n3, n1);
+//     }
+//   else if (n3 <= n1 && n1 <= n2) 
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n3, n1, n2);
+//     }
+//   else /* n3 <= n2 && n2 < n1 */
+//     {
+//       printf("A ordem crescente: %d %d %d\n", n3, n2, n1);
+//     }
 
-arr.sort().forEach(e => {
-    console.log(e)
-})
+const v1 = 1
+const v2 = 8
+const v3 = 5
+
+if (v2 >= v1 && v3 >= v2) {
+    console.log(v1, v2, v3)
+} else if (v3 >= v1 && v2 >= v3) {
+    console.log(v1, v3, v2)
+} else if (v1 >= v2 && v3 >= v1) {
+    console.log(v2, v1, v3)
+} else if (v3 >= v2 && v >= v3) {
+    console.log(v2, v3, v1)
+} else if (v1 >= v3 && v2 >= v1) {
+    console.log(v3, v1, v2)
+} else {
+    console.log(v3, v2, v1)
+}
 
 console.log('------------------------------------')
 
 // EX 16
 
-let k1 = 12
-let k2 = 6
+const k1 = 6
+const k2 = 12
 
-if (k1 % k2 == 0) console.log(k1 + ' é multiplo de ' + k2); else console.log(k1 + ' não é multiplo de ' + k2)
+if (k1 > k2) {
+    if (k1 % k2 == 0) {
+        console.log('são multiplos')
+    } else console.log('não são multiplos')
+} else {
+    if (k2 % k1 == 0) {
+        console.log('são multiplos')
+    } else console.log('não são multiplos')
+}
 
 console.log('------------------------------------')
 
 // EX 17
 
-let inicio = 22
-let termino = 06
+const start = 22
+const end = 06
 
-if (inicio > termino) {
-    console.log(`tempo de duração: ${24- (inicio - termino)} horas`)
-} else if (termino > inicio) {
-    console.log(`tempo de duração: ${termino - inicio} horas`)
+if (start > end) {
+    console.log(`tempo de duração: ${24- (start - end)} horas`)
+} else if (end > start) {
+    console.log(`tempo de duração: ${end - start} horas`)
 } else {
     console.log('tempo de duração: 24 horas')
 }
@@ -221,10 +264,10 @@ let valueThree = 3
 
 console.log('valueOne: '+valueOne,'valueTwo: '+ valueTwo,'valueThree: '+ valueThree)
 
-let a = valueTwo
+const auxiliar = valueTwo
 valueTwo = valueThree
 valueThree = valueOne
-valueOne = a
+valueOne = auxiliar
 
 console.log('valueOne: '+valueOne,'valueTwo: '+ valueTwo,'valueThree: '+ valueThree)
 
@@ -270,16 +313,42 @@ console.log('------------------------------------')
 
 // EX 22
 
-function dinheiro(x) {
-    let cedulas = [100, 50, 20, 10, 5, 2, 1]
-    let result = 0
+// function dinheiro(x) {
+//     const cedulas = [100, 50, 20, 10, 5, 2, 1]
+//     let result = 0
     
-    for (let i=0; i<cedulas.length; i++) {
-        result = parseInt(x / cedulas[i])
-        x %= cedulas[i]
-        console.log(`${result} notas de R$ ${cedulas[i]},00`)
-        // console.log(x)
-    }
+//     for (let i=0; i<cedulas.length; i++) {
+//         result = parseInt(x / cedulas[i])
+//         x %= cedulas[i]
+//         console.log(`${result} notas de R$ ${cedulas[i]},00`)
+//         // console.log(x)
+//     }
+// }
+
+
+function dinheiro(x) {
+    const cem = parseInt(x / 100)
+    let resto = x % 100
+    const cinq = parseInt(resto / 50)
+    resto = resto % 50
+    const vinte = parseInt(resto / 20)
+    resto = resto % 20
+    const dez = parseInt(resto / 10)
+    resto = resto % 10
+    const cinco = parseInt(resto / 5)
+    resto = resto % 5
+    const dois = parseInt(resto / 2)
+    resto = resto % 2
+    const um = parseInt(resto)
+
+    console.log(`${cem} notas de R$ 100,00`)
+    console.log(`${cinq} notas de R$ 50,00`)
+    console.log(`${vinte} notas de R$ 20,00`)
+    console.log(`${dez} notas de R$ 10,00`)
+    console.log(`${cinco} notas de R$ 5,00`)
+    console.log(`${dois} notas de R$ 2,00`)
+    console.log(`${um} notas de R$ 1,00`)
+
 }
 
 dinheiro(576)
@@ -289,11 +358,11 @@ console.log('------------------------------------')
 // EX 23
 
 function horario(x) {
-    let hora = parseInt(x / 3600)
-    let resto = x % 3600
-    let minuto = parseInt(resto / 60)
-    let sec = resto % 60
-    console.log(`${hora}:${minuto}:${sec}`)
+    const hour = parseInt(x / 3600)
+    const resto = x % 3600
+    const minute = parseInt(resto / 60)
+    const sec = resto % 60
+    console.log(`${hour}:${minute}:${sec}`)
 }
 
 horario(2592)
@@ -302,47 +371,50 @@ console.log('------------------------------------')
 
 // EX 24
 
-function proposta(x, y) {
-    let clt = (x -(x * 0.08) + 700).toFixed()
-    console.log(clt)
-    if (clt > y) {
-        return 'CLT'
+function proposta(clt, pj) {
+    fgts = ((clt / 13) * 0.08) * 13 // total fgts anual
+    beneficio = 700 * 13 // total beneficio anual
+    clt = ((clt - fgts) + beneficio).toFixed()
+    
+    if (clt > pj) {
+        return clt
     } else {
-        return 'PJ'
+        return pj
     }
 }
 
-console.log(proposta(1000, 1500))
+console.log(proposta(28000, 30000))
 
 console.log('------------------------------------')
 
 // EX 25
 
 function imposto(x) {
-    if (x > 21453.24) {
-        return x * 0.075
-    } else if ( x > 32151.48) {
-        return x * 0.15
-    } else if (x > 42869.16) {
-        return x * 0.225
-    } else if (x > 53565.72) {
-        return x * 0.275
-    } else {
+    if (x < 21453.24) {
         return x
+    } else if ( x < 32151.48) {
+        return x * 0.075
+    } else if (x < 42869.16) {
+        return x * 0.15
+    } else if (x < 53565.72) {
+        return x * 0.225
+    } else {
+        return x * 0.275
     }
 }
 
-console.log(imposto(25000))
+
+console.log('imposto = ' + imposto(proposta(28000, 30000)))
 
 console.log('------------------------------------')
 
 // EX 26
 
 function custo(x) {
-    let salario = 1000
-    let salarioh = (salario / 160) * 2    
+    const salary = 1000
+    const salaryh = (salary / 160) * 2    
 
-    return salarioh * x
+    return salaryh * x
 }
 
 console.log(custo(160))
