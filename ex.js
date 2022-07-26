@@ -178,32 +178,6 @@ console.log('------------------------------------')
 
 // EX 15
 
-  /* Existem 6 possiveis ordens para imprimior os numeros lidos */
-//   if (n1 <= n2 && n2 <= n3)
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n1, n2, n3);
-//     }
-//   else if (n1 <= n3 && n3 <= n2)
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n1, n3, n2);
-//     }
-//   else if (n2 <= n1 && n1 <= n3)
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n2, n1, n3);
-//     }
-//   else if (n2 <= n3 && n3 <= n1) 
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n2, n3, n1);
-//     }
-//   else if (n3 <= n1 && n1 <= n2) 
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n3, n1, n2);
-//     }
-//   else /* n3 <= n2 && n2 < n1 */
-//     {
-//       printf("A ordem crescente: %d %d %d\n", n3, n2, n1);
-//     }
-
 const v1 = 1
 const v2 = 8
 const v3 = 5
@@ -312,19 +286,6 @@ console.log(calculate('divide', 2,5))
 console.log('------------------------------------')
 
 // EX 22
-
-// function dinheiro(x) {
-//     const cedulas = [100, 50, 20, 10, 5, 2, 1]
-//     let result = 0
-    
-//     for (let i=0; i<cedulas.length; i++) {
-//         result = parseInt(x / cedulas[i])
-//         x %= cedulas[i]
-//         console.log(`${result} notas de R$ ${cedulas[i]},00`)
-//         // console.log(x)
-//     }
-// }
-
 
 function dinheiro(x) {
     const cem = parseInt(x / 100)
