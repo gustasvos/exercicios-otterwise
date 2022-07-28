@@ -20,7 +20,11 @@ const names = ['Angela', 'Rosa', 'Ticiana', 'Carla', 'Renata']
 let result = ''
 
 for (let i = 0; i < names.length; i++) {
-    result += names[i]
+    if (names[i] != names[names.length-1]) {
+        result += names[i] + ', '
+    } else {
+        result += names[i]
+    }
 }
 
 console.log(result)
@@ -62,15 +66,16 @@ function mostra(arr) {
 
     for (let i = 0; i <= arr.length; i++) {
         if (arr[i] % 2 == 0) {
-            par.push(arr[i])
+            par[par.length] = arr[i]
         } else {
-            impar.push(arr[i])
+            impar[impar.length] = arr[i]
         }
 
         if (arr[i] >= 0) {
-            pos.push(arr[i])
+            pos[pos.length] = arr[i]
+
         } else {
-            neg.push(arr[i])
+            neg[neg.length] = arr[i]
         }
     }
     console.log(`${par.length} valores pares`)
@@ -100,6 +105,55 @@ console.log('------------------------------------')
 const numbers = [1, 8, 6, 13, 7, 9, 15, 22, 356, 4, 3]
 let auxiliar = []
 for (let i=0; i<numbers.length; i++) {
-    auxiliar.push(numbers[i]*10)
+    auxiliar[auxiliar.length] = numbers[i]*10
 }
 console.log(auxiliar)
+
+console.log('------------------------------------')
+
+// EX 9
+
+function sum(num) {
+    let soma = 0
+    for (let i=1; i<=num; i++) {
+        soma += i
+    }
+    return soma
+}
+
+console.log(sum(10))
+
+console.log('------------------------------------')
+
+// EX 10
+
+const notas = [6,8,7]
+
+function media(arr) {
+    let sum = 0
+    for (let i = 0; i < notas.length; i++) {
+        sum += notas[i]
+    }
+    return sum / arr.length
+}
+
+console.log(media(notas))
+
+console.log('------------------------------------')
+
+// EX 11
+
+function search(name) {
+    for (let i=0; i<names.length; i++) {
+        if (name == names[i]) {
+            return `${name} existe no array`
+        }
+    }
+    return `${name} não existe no array`
+}
+
+console.log(search('Ticiana'))
+
+console.log('------------------------------------')
+
+// EX 12
