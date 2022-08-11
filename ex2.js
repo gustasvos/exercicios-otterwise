@@ -299,37 +299,36 @@ const strings = ['  h3ll0 w0rld', '  w3b d3v3l0p3r  ', '0tterw1s3', 'j4v4scr1pt 
 
 
 function change(arr) {
-    let strAux = ''
-    let arrAux = []
+    let aux = ''
     for (let i = 0; i < arr.length; i++) {
         let word = arr[i]
         for (let j = 0; j < word.length; j++) {
             let letter = word[j]
 
             if (letter == ' ') {
-                strAux += ''
+                aux += ''
             }
             else if (letter == '1') {
-                strAux += 'i'
+                aux += 'i'
             }
             else if (letter == '3') {
-                strAux += 'e'
+                aux += 'e'
             }
             else if (letter == '4') {
-                strAux += 'a'
+                aux += 'a'
             }
             else if (letter == '5') {
-                strAux += 's'
+                aux += 's'
             }
             else if (letter == '0') {
-                strAux += 'o'
+                aux += 'o'
             }
             else {
-                strAux += letter
+                aux += letter
             }
         }
-        arr[i] = strAux
-        strAux = ''
+        arr[i] = aux
+        aux = ''
     }
     console.log(arr)
 }
