@@ -197,7 +197,7 @@ const best_sellers = (arr, quant) => {
 }
 
 const price_increase = (arr, percent) => {
-    for (let  i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         increase = arr[i].valor * (percent / 100)
         arr[i].valor = arr[i].valor + increase
     }
@@ -226,7 +226,7 @@ console.log('------------------------------------')
 
 const n = [1, 8, 6, 13, 7, 9, 15, 22, 356, 4, 3]
 
-const multiplicaPorDez = (num) =>  {
+const multiplicaPorDez = (num) => {
     num *= 10
     return num
 }
