@@ -1,3 +1,188 @@
+// EX 1
+
+const money = (num) => {
+    const notas = [100, 50, 20, 10, 5, 2, 1]
+    let result = []
+
+    for (let i = 0; i < notas.length; i++) {
+        if (i == 0) {
+            result[i] = parseInt(num / notas[i])
+            resto = num % notas[i]
+        }
+        else {
+            result[i] = parseInt(resto / notas[i])
+            resto = resto % notas[i]
+        }
+        console.log(result[i] + ' notas de R$ ' + notas[i])
+    }
+    
+}
+
+money(386)
+
+console.log('------------------------------------')
+
+// EX 2
+
+const job = (clt, pj) => {
+    fgts = ((clt / 13) * 0.08) * 13
+    beneficio = 700 * 13
+    clt = ((clt - fgts) + beneficio).toFixed()
+    
+    if (clt > pj) return clt 
+    else return pj
+}
+
+console.log(job(28000, 30000))
+
+console.log('------------------------------------')
+
+// EX 3
+
+const names = ['Angela', 'Rosa', 'Ticiana', 'Carla', 'Renata']
+
+const print_arr = (arr) => {
+    let text = ''
+    for (let i = 0; i < arr.length; i++) {
+        (names[i] != names[names.length - 1]) ? text += names[i] + ', ' : text += names[i]   
+    }
+    return text
+}
+
+console.log(print_arr(names))
+
+console.log('------------------------------------')
+
+// EX 4
+
+const tabuada = (num, lim) => {
+    for (let i = 1; i <= lim; i++) {
+        console.log(`${num} x ${i} = ${num * i}`)
+    }
+}
+
+tabuada(2, 6)
+
+console.log('------------------------------------')
+
+// EX 5
+
+const valores = [1, -7, -23, 25, -19, 13, 10, -8, 52, -153, -127]
+
+const x = (arr, param) => {
+    let aux = []
+    for (let i = 0; i < arr.length; i++) {
+        if (param == 'positivo') {
+            if (arr[i] >= 0) {
+                aux[aux.length] = arr[i]
+            }
+        }
+        else if (param == 'negativo') {
+            if (arr[i] < 0) {
+                aux[aux.length] = arr[i]
+            }
+        }
+        else if (param == 'par') {
+            if (arr[i] % 2 == 0) {
+                aux[aux.length] = arr[i]
+            }
+        }
+        else if (param == 'impar') {
+            if (arr[i] % 2 != 0) {
+                aux[aux.length] = arr[i]
+            }
+        }
+    }
+    return `quantidade: ${aux.length} / ${aux}`
+}
+
+console.log(x(valores, 'par'))
+
+console.log('------------------------------------')
+
+
+// EX 6
+
+const values = [1, 8, 6, 13, 7, 9, 15, 22, 356, 4, 3]
+
+const mult = (arr, num) => {
+    let aux = []
+    for (let i = 0; i < arr.length; i++) {
+        aux[i] = arr[i] * num
+    }
+    return aux
+}
+
+console.log(mult(values, 2))
+
+console.log('------------------------------------')
+
+// EX 7
+
+const media = (arr) => {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum / arr.length
+}
+
+console.log(media(values).toFixed(2))
+
+console.log('------------------------------------')
+
+// EX 8
+
+const find_number = (arr) => {
+    let menor = 0
+    let maior = 0
+    let posmenor = 0
+    let posmaior = 0
+    for (i = 0; i < arr.length; i++) {
+        if (i == 0) {
+            menor = arr[i]
+        }
+        else if (menor > arr[i]) {
+            menor = arr[i]
+            posmenor = i
+        }
+        else if (maior < arr[i]) {
+            maior = arr[i]
+            posmaior = i
+        }
+    }
+    console.log('Menor valor: ' + menor)
+    console.log('Posição: ' + posmenor)
+    console.log('Maior valor: ' + maior)
+    console.log('Posição: ' + posmaior)
+
+}
+
+find_number(values)
+
+console.log('------------------------------------')
+
+// EX 9
+
+const itens = [
+    { nome: 'maçã', quantidade: 2, valor: 0.5},
+    { nome: 'alface', quantidade: 1, valor: 1.73},
+    { nome: 'Água 5L', quantidade: 2, valor: 5.99},
+    { nome: 'Pão Francês', quantidade: 8, valor: 0.63}
+]
+
+const compra = (arr) => {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += (arr[i].valor * arr[i].quantidade)
+    }
+    return 'R$ ' + sum
+}
+
+console.log(compra(itens))
+
+console.log('------------------------------------')
+
 // EX 10
 
 const dados = [
@@ -204,21 +389,21 @@ const price_increase = (arr, percent) => {
     return arr
 }
 
-// console.log(best_seller_author(books))
-// console.log('ABAIXO DO PREÇO')
-// console.log(books_under_price(books, 40))
-// console.log('ACIMA DO PREÇO')
-// console.log(books_over_price(books, 60))
-// console.log('PESQUISA POR NOME')
-// console.log(search_by_name(books, "mais esperto que o diabo"))
-// console.log('PESQUISA POR AUTOR')
-// console.log(search_by_author(books, 'Benjamin Graham'))
-// console.log('PESQUISA POR CÓDIGO')
-// console.log(search_by_code(books, '8547001085'))
-// console.log('ESTOQUE')
-// console.log(book_storage(books))
-// console.log(best_sellers(books, 3))
-// console.log(price_increase(books, 25))
+console.log(best_seller_author(books))
+console.log('ABAIXO DO PREÇO')
+console.log(books_under_price(books, 40))
+console.log('ACIMA DO PREÇO')
+console.log(books_over_price(books, 60))
+console.log('PESQUISA POR NOME')
+console.log(search_by_name(books, "mais esperto que o diabo"))
+console.log('PESQUISA POR AUTOR')
+console.log(search_by_author(books, 'Benjamin Graham'))
+console.log('PESQUISA POR CÓDIGO')
+console.log(search_by_code(books, '8547001085'))
+console.log('ESTOQUE')
+console.log(book_storage(books))
+console.log(best_sellers(books, 3))
+console.log(price_increase(books, 25))
 
 console.log('------------------------------------')
 

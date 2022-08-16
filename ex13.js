@@ -16,43 +16,8 @@ const products = [{
 }
 ]
 
-// const compra = (arr, quant, cod) => {
-//     let carrinho = []
-//     let valorTotal = 0
-//     for (let i = 0; i < arr.length; i++) {
-//         if (cod == arr[i].cod) {
-//             if (quant <= arr[i].stock) {
-//                 carrinho[carrinho.length] = arr[i]
-//                 valorTotal += arr[i].price * quant
-//                 console.log(carrinho)
-//                 console.log(valorTotal)
-//                 return true
-//             }
-//             else {
-//                 return false
-//             }
-//         }
-//         else {
-//             return false
-//         }
-//     }
-// }
 
-
-
-// const cart = (arr, quant, cod) => {
-//     let cart = []
-//     let total = 0
-
-//     for (let i = 0; i < arr.length; i++) {
-//         cart[cart.length] = arr[i]
-//         total += arr[i].price * quant
-//     }
-//     return total
-// }
-
-
-const buy = (arr, quant, cod) => {
+const purchase = (arr, quant, cod) => {
     let cart = []
     let total = 0
     for (let i = 0; i < arr.length; i++) {
@@ -71,26 +36,26 @@ const buy = (arr, quant, cod) => {
 const payment = (total, payOption) => {
     if (payOption == 'boleto') {
         total = total - (total * 0.10)
-        return `R$ ${total} a vista no boleto`
+        return `R$ ${total.toFixed(2)} a vista no boleto`
     }
     else if (payOption == 'debito') {
         total = total - (total * 0.15)
-        return `R$ ${total} a vista no débito`
+        return `R$ ${total.toFixed(2)} a vista no débito`
     }
     else if (payOption == 'credito') {
         const credit = (parcelas) => {
             const  p = (total / parcelas)
             const juros = total * 0.03
             const ptotal = p + juros
-            return `${parcelas} parcelas de R$ ${ptotal}`
+            return `${parcelas} parcelas de R$ ${ptotal.toFixed(2)}`
         }
         return credit(12)
     }
     else return false
 }
 
-const teste = buy(products, 2, 0)
-// console.log(buy(products, 2, 0))
+const value = purchase(products, 2, 0)
+// console.log(purchase(products, 2, 0))
 
 
-console.log(payment(teste, 'credito'))
+console.log(payment(value, 'credito'))

@@ -21,6 +21,7 @@ let result = ''
 
 for (let i = 0; i < names.length; i++) {
     if (names[i] != names[names.length - 1]) {
+        console.log(names[i])
         result += names[i] + ', '
     } else {
         result += names[i]
